@@ -1,0 +1,18 @@
+---
+layout: default
+title: 首页
+---
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+    </li>
+  {% else %}
+    <li style="text-align:center;padding:60px 0;color:#999;">
+      <p>📝 还没有文章，开始写第一篇日志吧！</p>
+    </li>
+  {% endfor %}
+</ul>
