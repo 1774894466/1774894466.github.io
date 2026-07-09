@@ -1,18 +1,40 @@
----
-layout: default
-title: 首页
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>考研复习日志</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="/">考研复习日志</a></h1>
+      <p class="subtitle">华东师范大学应用心理347 · 日拱一卒，功不唐捐</p>
+      <nav>
+        <a href="/">首页</a>
+        <a href="categories/politics.html">政治</a>
+        <a href="categories/english.html">英语</a>
+        <a href="categories/psychology.html">心理学</a>
+        <a href="about.html">关于</a>
+      </nav>
+    </div>
+  </header>
 
-<ul class="post-list">
-  {% for post in site.posts %}
-    <li>
-      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p class="excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-    </li>
-  {% else %}
-    <li style="text-align:center;padding:60px 0;color:#999;">
-      <p>📝 还没有文章，开始写第一篇日志吧！</p>
-    </li>
-  {% endfor %}
-</ul>
+  <main class="container">
+    <ul class="post-list">
+      <li>
+        <time>2026-07-09</time>
+        <h2><a href="posts/2026-07-09-first.html">第一篇复习日志：开始</a></h2>
+        <p class="excerpt">从今天起，正式开始考研复习。这是一个漫长的旅程，但我相信每一步都算数。</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>🌱 日拱一卒，功不唐捐 · &copy; 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
